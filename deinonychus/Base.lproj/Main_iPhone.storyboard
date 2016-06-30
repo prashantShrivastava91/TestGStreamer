@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DEViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labfel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U33-oW-VdG">
+                                <rect key="frame" x="16" y="197" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-mC-A6s">
+                                <rect key="frame" x="43" y="65" width="46" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="vXZ-lx-hvc" eventType="touchDown" id="GAV-1E-ZCL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP0-ND-zPL">
+                                <rect key="frame" x="137" y="65" width="46" height="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="vXZ-lx-hvc" eventType="touchDown" id="xx4-ku-OfN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2k-Y5-xk1" customClass="EaglUIView">
+                                <rect key="frame" x="16" y="268" width="288" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Y4k-bE-hhP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S2k-Y5-xk1" firstAttribute="top" secondItem="U33-oW-VdG" secondAttribute="bottom" constant="50" id="7VJ-QX-TVN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S2k-Y5-xk1" secondAttribute="trailing" id="NZL-jw-ipF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="S2k-Y5-xk1" secondAttribute="bottom" id="NyN-9U-CLL"/>
+                            <constraint firstItem="U33-oW-VdG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="asG-Ep-boV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U33-oW-VdG" secondAttribute="trailing" id="g66-Wh-OqR"/>
+                            <constraint firstItem="S2k-Y5-xk1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="o37-IM-Lap"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="U33-oW-VdG" id="rZh-oJ-lqY"/>
+                        <outlet property="pause" destination="IP0-ND-zPL" id="kyN-VZ-25I"/>
+                        <outlet property="play" destination="8Z3-mC-A6s" id="shC-SL-FfS"/>
+                        <outlet property="videoView" destination="S2k-Y5-xk1" id="yWA-s4-gCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
