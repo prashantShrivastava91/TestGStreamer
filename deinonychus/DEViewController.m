@@ -61,7 +61,7 @@ GStreamerBackend *gst_backend;
         self.play.enabled = TRUE;
         self.pause.enabled = TRUE;
         self.label.text = @"Ready";
-        [gst_backend setUri:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm"];
+        [gst_backend setUri:@"http://techslides.com/demos/sample-videos/small.webm"];
     });
 }
 

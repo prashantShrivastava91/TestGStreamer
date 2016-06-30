@@ -27,6 +27,9 @@ GST_PLUGIN_STATIC_DECLARE(gio);
 #if defined(GST_IOS_PLUGIN_MATROSKA) || defined(GST_IOS_PLUGINS_CORE)
 GST_PLUGIN_STATIC_DECLARE(matroska);
 #endif
+#if defined(GST_IOS_PLUGIN_VORBIS) || defined(GST_IOS_PLUGINS_CORE)
+GST_PLUGIN_STATIC_DECLARE(vorbis);
+#endif
 #if defined(GST_IOS_PLUGIN_PANGO) || defined(GST_IOS_PLUGINS_CORE)
 GST_PLUGIN_STATIC_DECLARE(pango);
 #endif
@@ -288,12 +291,9 @@ GST_PLUGIN_STATIC_DECLARE(ogg);
 #if defined(GST_IOS_PLUGIN_THEORA) || defined(GST_IOS_PLUGINS_CODECS)
 GST_PLUGIN_STATIC_DECLARE(theora);
 #endif
-#if defined(GST_IOS_PLUGIN_VORBIS) || defined(GST_IOS_PLUGINS_CODECS)
-GST_PLUGIN_STATIC_DECLARE(vorbis);
-#endif
-#if defined(GST_IOS_PLUGIN_IVORBISDEC) || defined(GST_IOS_PLUGINS_CODECS)
-GST_PLUGIN_STATIC_DECLARE(ivorbisdec);
-#endif
+//#if defined(GST_IOS_PLUGIN_IVORBISDEC) || defined(GST_IOS_PLUGINS_CODECS)
+//GST_PLUGIN_STATIC_DECLARE(ivorbisdec);
+//#endif
 #if defined(GST_IOS_PLUGIN_ALAW) || defined(GST_IOS_PLUGINS_CODECS)
 GST_PLUGIN_STATIC_DECLARE(alaw);
 #endif
@@ -491,6 +491,9 @@ gst_ios_init (void)
 
 #if defined(GST_IOS_PLUGIN_MATROSKA) || defined(GST_IOS_PLUGINS_CORE)
     GST_PLUGIN_STATIC_REGISTER(matroska);
+#endif
+#if defined(GST_IOS_PLUGIN_VORBIS) || defined(GST_IOS_PLUGINS_CORE)
+    GST_PLUGIN_STATIC_REGISTER(vorbis);
 #endif
 #if defined(GST_IOS_PLUGIN_COREELEMENTS) || defined(GST_IOS_PLUGINS_CORE)
     GST_PLUGIN_STATIC_REGISTER(coreelements);
@@ -789,9 +792,9 @@ gst_ios_init (void)
 #if defined(GST_IOS_PLUGIN_THEORA) || defined(GST_IOS_PLUGINS_CODECS)
     GST_PLUGIN_STATIC_REGISTER(theora);
 #endif
-#if defined(GST_IOS_PLUGIN_IVORBISDEC) || defined(GST_IOS_PLUGINS_CODECS)
-    GST_PLUGIN_STATIC_REGISTER(ivorbisdec);
-#endif
+//#if defined(GST_IOS_PLUGIN_IVORBISDEC) || defined(GST_IOS_PLUGINS_CODECS)
+//    GST_PLUGIN_STATIC_REGISTER(ivorbisdec);
+//#endif
 #if defined(GST_IOS_PLUGIN_ALAW) || defined(GST_IOS_PLUGINS_CODECS)
     GST_PLUGIN_STATIC_REGISTER(alaw);
 #endif
